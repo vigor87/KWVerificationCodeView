@@ -148,6 +148,10 @@ public protocol KWVerificationCodeViewDelegate: class {
   }
 
   // MARK: - Public Methods
+  public func focus() {
+    textFieldViews[0].numberTextField.becomeFirstResponder()
+  }
+  
   public func getVerificationCode() -> String {
     var verificationCode = ""
     for textFieldView in textFieldViews {
